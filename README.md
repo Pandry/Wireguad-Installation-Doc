@@ -52,7 +52,7 @@ wg genkey
 
 ### Create the default configuration files
 ```
-nano wg.config
+touch /etc/wireguard/wg0.conf && nano /etc/wireguard/wg0.conf
 ```
 
 ### then input the sample configuration file
@@ -70,7 +70,7 @@ AllowedIPs = 0.0.0.0/0, 127.0.0.1/8
 
 ### Apply the configuration
 ```
-wg setconf wg0 wg.config
+wg setconf wg0 /etc/wireguard/wg0.conf
 ```
 
 ### Set the link up
